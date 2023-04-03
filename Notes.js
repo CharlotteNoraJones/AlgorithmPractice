@@ -31,6 +31,22 @@ function printUnorderedPairs(arr) {
     }
 }
 
+class Node {
+    public int value;
+    public Node left;
+    public Node right;
+
+    public int sum(Node node) {
+        if (node is null) {
+            return 0;
+        }
+        else {
+            return sum(this.left.value) + this.value + sum(this.right.value);
+        }
+    }
+
+}
+
 let testArr = [1, 2, 3, 4, 5];
 foo(testArr);
 printPairs(testArr);
